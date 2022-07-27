@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div> 
+        <header>
+            <h1>Stuff to get done.</h1>
+        </header>
+    </div>
+    <div id="popup" class="modal" style="display: none;">
+        <underdiv id="popupcntnt" class="popup">
+            <span class="close" onclick="xButton()">&times;</span>
+            <p>You want to change something?</p>
+            <section>
+                <label>What to do:<input type="text" name="subject" id="subjectEdit" value=""/></label>
+                <br>
+                <label>Why:<input type="text" id="descriptionEdit" value=""/></label>
+                <br>
+                <label>When:<input type="date" id="dateEdit" type="date" value=""/></label>
+                <br>
+                <button id="submitbtn" type="submit" onclick="editSubmit()">Let's do it</button>
+            </section>
+        </underdiv>
+    </div>
+    <form id="inputform">
+        <label>What to do:<input type="text" name="subject" id="subject" value=""/></label>
+        <br>
+        <label>Why:<input type="text" id="description" value=""/></label>
+        <br>
+        <label>When:<input type="date" id="date" type="date" value=""/></label>
+        <br>
+        <button id="submitbtn" type="submit" onclick="mySubmit(event)">Let's do it</button>
+    </form>
+    <table style="width: 100%;">
+        <thead>
+            <th>Subject</th>
+            <th>Description</th>
+            <th>Date</th>
+        </thead>
+        <tbody id="list">
+            <tr></tr>
+        </tbody>
+    </table>
+    <div>
+    </div>
+
+<script src="/script.js"></script>
+</body>
+</html>
